@@ -25,9 +25,11 @@ namespace _4RTools.Model
 
     public class AHK : Action
     {
-        public Dictionary<string,KeyConfig> ahkEntries { get; set; } = new Dictionary<string, KeyConfig>();
+        public Dictionary<string, KeyConfig> ahkEntries { get; set; } = new Dictionary<string, KeyConfig>();
         private string ACTION_NAME = "AHK20";
         public int ahkDelay { get; set; } = 10;
+
+        public Boolean autoMode { get; set; } = false;
 
         private _4RThread thread;
 
@@ -54,9 +56,9 @@ namespace _4RTools.Model
                 Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
                 if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 {
-                    if (config.clickActive && Keyboard.IsKeyDown(config.key))
+                    if (config.clickActive && (autoMode ? true : Keyboard.IsKeyDown(config.key)))
                     {
-                        while (Keyboard.IsKeyDown(config.key))
+                        while (autoMode ? true : Keyboard.IsKeyDown(config.key))
                         {
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
@@ -69,7 +71,7 @@ namespace _4RTools.Model
                     }
                     else
                     {
-                        while (Keyboard.IsKeyDown(config.key))
+                        while (autoMode ? true : Keyboard.IsKeyDown(config.key))
                         {
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                             Thread.Sleep(this.ahkDelay);

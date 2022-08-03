@@ -108,6 +108,8 @@
             this.in208 = new System.Windows.Forms.TextBox();
             this.in316 = new System.Windows.Forms.TextBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.in72 = new System.Windows.Forms.TextBox();
+            this.pictureBox40 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -147,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox22
@@ -844,6 +847,24 @@
             this.pictureBox39.TabIndex = 184;
             this.pictureBox39.TabStop = false;
             // 
+            // in72
+            // 
+            this.in72.Location = new System.Drawing.Point(314, 352);
+            this.in72.Name = "in72";
+            this.in72.Size = new System.Drawing.Size(55, 20);
+            this.in72.TabIndex = 187;
+            // 
+            // pictureBox40
+            // 
+            this.pictureBox40.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox40.BackgroundImage")));
+            this.pictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox40.Location = new System.Drawing.Point(274, 349);
+            this.pictureBox40.Name = "pictureBox40";
+            this.pictureBox40.Size = new System.Drawing.Size(36, 26);
+            this.pictureBox40.TabIndex = 186;
+            this.pictureBox40.TabStop = false;
+            // 
             // SkillAutoBuffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -851,6 +872,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 407);
+            this.Controls.Add(this.in72);
+            this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.in316);
             this.Controls.Add(this.pictureBox39);
             this.Controls.Add(this.in208);
@@ -969,6 +992,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1054,5 +1078,7 @@
         private System.Windows.Forms.TextBox in208;
         private System.Windows.Forms.TextBox in316;
         private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.TextBox in72;
+        private System.Windows.Forms.PictureBox pictureBox40;
     }
 }

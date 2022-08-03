@@ -55,6 +55,7 @@ namespace _4RTools.Utils
         PEEL_CHANGE = 206,
         COMBAT_PILL = 662,
         ENCHANT_BLADE = 316,
+        BRAGI = 72,
 
         //ELEMENTAL CONVERTERS
         PROPERTYFIRE = 90,

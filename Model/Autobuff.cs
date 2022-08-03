@@ -56,6 +56,7 @@ namespace _4RTools.Model
                     }
                     else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
                     {
+                        Console.WriteLine("Using buff on hotkey: " + item.Value.ToString());
                         this.useAutobuff(item.Value);
                         Thread.Sleep(10);
                     }
