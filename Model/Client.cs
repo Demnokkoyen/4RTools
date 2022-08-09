@@ -29,6 +29,11 @@ namespace _4RTools.Model
         {
             return clients;
         }
+
+        public static bool ExistsByProcessName(string processName)
+        {
+            return clients.Exists(client => client.processName == processName);
+        }
     }
 
     public sealed class ClientSingleton
@@ -55,18 +60,18 @@ namespace _4RTools.Model
         public Process process { get; }
 
         private static int MAX_POSSIBLE_HP = 1000000;
-        private string execName { get; set; }
+        public string processName { get; private set; }
         private Utils.ProcessMemoryReader PMR { get; set; }
         private int currentNameAddress { get; set; }
         private int currentHPBaseAddress { get; set; }
         private int statusBufferAddress { get; set; }
         private int _num = 0;
 
-        public Client(string execName, int currentHPBaseAddress, int currentNameAddress)
+        public Client(string processName, int currentHPBaseAddress, int currentNameAddress)
         {
             this.currentNameAddress = currentNameAddress;
             this.currentHPBaseAddress = currentHPBaseAddress;
-            this.execName = execName;
+            this.processName = processName;
             this.statusBufferAddress = currentHPBaseAddress + 0x474;
         }
 
@@ -146,16 +151,6 @@ namespace _4RTools.Model
             return ReadCurrentSp() * 100 < percent * ReadMaxSp();
         }
 
-        public string HpLabel()
-        {
-            return string.Format("{0} / {1}", ReadCurrentHp(), ReadMaxHp());
-        }
-
-        public string SpLabel()
-        {
-            return string.Format("{0} / {1}", ReadCurrentSp(), ReadMaxSp());
-        }
-
         public uint ReadCurrentHp()
         {
             return ReadMemory(this.currentHPBaseAddress);
@@ -191,7 +186,7 @@ namespace _4RTools.Model
        
             foreach(Client c in ClientListSingleton.GetAll())
             {
-                if (c.execName == processName)
+                if (c.processName == processName)
                 {
                     uint hpBaseValue = ReadMemory(c.currentHPBaseAddress);
                     if (hpBaseValue > 0 && hpBaseValue < MAX_POSSIBLE_HP) return c;
