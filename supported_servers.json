@@ -48,6 +48,12 @@
         "nameAddress": "0x010DF5D8"
     },
     {
+        "name": "MidgardRO",
+        "description": "Midgard Ragnarok Online",
+        "hpAddress": "0x010DCE10",
+        "nameAddress": "0x010DF5D8"
+    },
+    {
         "name": "cliente",
         "description": "RagnaCool",
         "hpAddress": "0x010DCE10",
@@ -135,7 +141,7 @@
         "name": "remember-ro+gepard+lgp",
         "description": "RememberRO",
         "hpAddress": "0x0083E1B4",
-        "nameAddress": "0x00E749D8"
+        "nameAddress": "0x0083E674"
     },
     {   
         "name": "AllstarRO",
@@ -162,9 +168,15 @@
         "nameAddress": "0x00E4D768"
     },
      {
-        "name": "AnnixRO",
+        "name": "Annix RO",
         "description": "Annix Ragnarok Online",
-        "hpAddress": "0x00E4CAF4",
-        "nameAddress": "0x00E4D768"
+        "hpAddress": "0x010DCE10",
+        "nameAddress": "0x010DF5D8"
+    },
+    {
+        "name": "GatheringRO",
+        "description": "Gathering RO",
+        "hpAddress": "0x010DCE10",
+        "nameAddress": "0x010DF5D8"
     }
 ]
