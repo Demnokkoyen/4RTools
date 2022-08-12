@@ -58,6 +58,8 @@ namespace _4RTools.Model
         private _4RThread thread;
         public List<ChainConfig> chainConfigs { get; set; } = new List<ChainConfig>();
 
+        public Boolean autoMode { get; set; } = false;
+
         public Macro(string macroname, int macroLanes)
         {
             this.actionName = macroname;
@@ -92,7 +94,7 @@ namespace _4RTools.Model
         {
             foreach (ChainConfig chainConfig in this.chainConfigs)
             {
-                if (chainConfig.trigger != Key.None && Keyboard.IsKeyDown(chainConfig.trigger))
+                if (chainConfig.trigger != Key.None && (autoMode ? true : Keyboard.IsKeyDown(chainConfig.trigger)))
                 {
                     Dictionary<string, MacroKey> macro = chainConfig.macroEntries;
                     for (int i = 1; i <= macro.Count; i++)//Ensure to execute keys in Order

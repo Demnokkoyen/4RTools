@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a87e8305-d729-4056-98d7-7485c0fe4873" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/4RTools.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/4RTools.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forms/AHKForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/AHKForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forms/AHKForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/AHKForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forms/SkillAutoBuffForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/SkillAutoBuffForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forms/SkillAutoBuffForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Forms/SkillAutoBuffForm.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AHK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AHK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Autobuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Autobuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Macro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Macro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/EffectStatusIDs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/EffectStatusIDs.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2CreRZ0BfKuC5LfbGNuIzMMDCPr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../4rtoolsnodejs" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a87e8305-d729-4056-98d7-7485c0fe4873" name="Changes" comment="" />
+      <created>1659565129756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659565129756</updated>
+      <workItem from="1659565135006" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

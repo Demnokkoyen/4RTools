@@ -36,6 +36,7 @@ namespace _4RTools.Forms
                         ToggleCheckboxByName(config.Key, config.Value.clickActive);
                     }
 
+                    this.autoMode.Checked = ProfileSingleton.GetCurrent().AHK.autoMode;
                     this.txtSpammerDelay.Text = ProfileSingleton.GetCurrent().AHK.ahkDelay.ToString();
                     this.txtSkillTimerKey.Text = ProfileSingleton.GetCurrent().AutoRefreshSpammer.refreshKey.ToString();
                     this.txtAutoRefreshDelay.Text = ProfileSingleton.GetCurrent().AutoRefreshSpammer.refreshDelay.ToString();
@@ -55,15 +56,28 @@ namespace _4RTools.Forms
         {
             CheckBox checkbox = (CheckBox)sender;
 
-            Key key = (Key)new KeyConverter().ConvertFromString(checkbox.Text);
-            bool haveMouseClick = checkbox.CheckState == CheckState.Checked ? true : false;
+            if (checkbox.Name != "autoMode")
+            {
+                Key key = (Key)new KeyConverter().ConvertFromString(checkbox.Text);
+                bool haveMouseClick = checkbox.CheckState == CheckState.Checked ? true : false;
 
-            if (checkbox.CheckState == CheckState.Checked || checkbox.CheckState == CheckState.Indeterminate)
-                ProfileSingleton.GetCurrent().AHK.AddAHKEntry(checkbox.Name, new KeyConfig(key, haveMouseClick));
-            else
-                ProfileSingleton.GetCurrent().AHK.RemoveAHKEntry(checkbox.Name);
+                if (checkbox.CheckState == CheckState.Checked || checkbox.CheckState == CheckState.Indeterminate)
+                    ProfileSingleton.GetCurrent().AHK.AddAHKEntry(checkbox.Name, new KeyConfig(key, haveMouseClick));
+                else
+                    ProfileSingleton.GetCurrent().AHK.RemoveAHKEntry(checkbox.Name);
 
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AHK);
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AHK);
+
+                return;
+            }
+
+            try
+            {
+                ProfileSingleton.GetCurrent().AHK.autoMode = checkbox.CheckState == CheckState.Checked ? true : false;
+                ProfileSingleton.GetCurrent().MacroSwitch.autoMode = checkbox.CheckState == CheckState.Checked ? true : false;
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AHK);
+            }
+            catch { }
         }
 
         private void txtSpammerDelay_TextChanged(object sender, EventArgs e)
@@ -118,11 +132,6 @@ namespace _4RTools.Forms
                     if(check.Enabled)
                         check.CheckStateChanged += onCheckChange;
                 }
-        }
-
-        private void noclicksample_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

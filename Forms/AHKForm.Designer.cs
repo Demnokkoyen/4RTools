@@ -86,6 +86,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblAutoRefreshKey = new System.Windows.Forms.Label();
             this.lblAutoRefreshDelay = new System.Windows.Forms.Label();
+            this.autoMode = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtSpammerDelay)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -684,12 +685,23 @@
             this.lblAutoRefreshDelay.Text = "Delay";
             this.lblAutoRefreshDelay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // autoMode
+            // 
+            this.autoMode.AutoSize = true;
+            this.autoMode.Location = new System.Drawing.Point(12, 241);
+            this.autoMode.Name = "autoMode";
+            this.autoMode.Size = new System.Drawing.Size(77, 17);
+            this.autoMode.TabIndex = 34;
+            this.autoMode.Text = "Auto mode";
+            this.autoMode.UseVisualStyleBackColor = true;
+            // 
             // AHKForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(406, 270);
+            this.Controls.Add(this.autoMode);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox2);
@@ -815,5 +827,6 @@
         private System.Windows.Forms.Label lblAutoRefreshDelay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown txtAutoRefreshDelay;
+        private System.Windows.Forms.CheckBox autoMode;
     }
 }
